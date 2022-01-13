@@ -1,0 +1,292 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"o",
+				"import"
+			],
+			[
+				"Htt",
+				"HttpResponse"
+			],
+			[
+				"Text",
+				"TextField"
+			],
+			[
+				"Dec",
+				"DecimalField"
+			],
+			[
+				"Prod",
+				"Product"
+			],
+			[
+				"is",
+				"is_valid"
+			],
+			[
+				"P",
+				"POST"
+			],
+			[
+				"Pr",
+				"ProductForm"
+			],
+			[
+				"for",
+				"forms"
+			],
+			[
+				"H",
+				"HttpResponse"
+			],
+			[
+				"decimal",
+				"decimal_places"
+			],
+			[
+				"__",
+				"__init__"
+			],
+			[
+				"scr",
+				"ScreenManager"
+			],
+			[
+				"Scree",
+				"ScreenManager"
+			],
+			[
+				"M",
+				"MyGridLayout"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Manny/Dev/DjangoEcommerce"
+	],
+	"file_history":
+	[
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/products/admin.py",
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/DjangoEcommerce/urls.py",
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/templates/home.html",
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/pages/views.py",
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/products/models.py",
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/DjangoEcommerce/settings.py",
+		"/C/Users/Manny/AppData/Local/Temp/Rar$DIa3732.45535/license.txt",
+		"/C/Users/Manny/Dev/DjangoEcommerce/src/DjangoEcommerce/products/views.py",
+		"/C/Users/Manny/Dev/DjangoEcommerce/.gitignore",
+		"/C/Users/Manny/Dev/DjangoEcommerce/django-ecommerce/manage.py",
+		"/C/Users/Manny/Dev/DjangoEcommerce/django-ecommerce/requirements.txt",
+		"/C/Users/Manny/Dev/DjangoEcommerce/django-ecommerce/README.md",
+		"/C/Users/Manny/Desktop/SQLinventory.py",
+		"/C/Users/Manny/Dev/DjangoLiquor/src/DjangoLiquor/product/views.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/products/forms.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/products/templates/products/product_create.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/products/templates/products/product_detail.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/product/detail.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/trydjango/urls.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/products/models.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/navbar.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/base.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/home.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/contact.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/about.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/trydjango/settings.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/pages/views.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/templates/product.html",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/products/admin.py",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/products/migrations/0001_initial.py",
+		"/C/Users/Manny/Dev/trydjango/trydjango.sublime-project",
+		"/C/Users/Manny/Dev/trydjango/src/trydjango/settings.py",
+		"/C/Users/Manny/kivy_venv/inventory.py",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/ReShade.ini",
+		"/C/Users/Manny/kivy_venv/SQLinventory.py",
+		"/C/Users/Manny/kivy_venv/inventory.kv",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/Cyber Runner.ini",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/plugins/cyber_engine_tweaks/bindings.json",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/plugins/cyber_engine_tweaks/mods/FGR/Config/config.txt",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/dxgi.dll",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/plugins/cyber_engine_tweaks/mods/FGR/Modules/FGR - XP and Gigs.lua",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/r6/scripts/lifepath_bonuses_and_gang_corp_traits/config_gang_corp_traits.reds",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/plugins/cyber_engine_tweaks/mods/FGR/Config/configinfo.txt",
+		"/E/Cyberpunk 2077/Cyberpunk 2077/bin/x64/plugins/cyber_engine_tweaks/mods/FGR/Config/Presets/config - Vanilla Default Tier 1.txt",
+		"/C/Users/Manny/AppData/Local/Temp/Rar$DIa15928.31497/betterMelee_LeapNewCollision.reds",
+		"/C/Users/Manny/Desktop/inventory.kv",
+		"/C/Users/Manny/kivy_venv/calc.kv",
+		"/C/Users/Manny/kivy_venv/calc.py",
+		"/C/Users/Manny/kivy_venv/color.kv",
+		"/C/Users/Manny/kivy_venv/box.kv",
+		"/C/Users/Manny/kivy_venv/bg.kv",
+		"/C/Users/Manny/kivy_venv/inherit.py",
+		"/C/Users/Manny/kivy_venv/design.py",
+		"/C/Users/Manny/kivy_venv/calc/calc.spec",
+		"/C/Users/Manny/kivy_venv/label_color.kv",
+		"/C/Users/Manny/kivy_venv/label_color.py",
+		"/C/Users/Manny/kivy_venv/inherit.kv",
+		"/C/Users/Manny/kivy_venv/box.py",
+		"/C/Users/Manny/kivy_venv/color.py",
+		"/C/Users/Manny/kivy_venv/builder.py",
+		"/C/Users/Manny/kivy_venv/hello.py",
+		"/C/Users/Manny/kivy_venv/my.kv"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "DjangoEcommerce.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
