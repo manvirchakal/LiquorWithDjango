@@ -3,4 +3,5 @@
 **/Scripts
 **/.git
 *pyvenv.cfg
-
+*DjangoEcommerce.sublime-project
+*DjangoEcommerce.sublime-workspace
