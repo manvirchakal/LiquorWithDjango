@@ -5,7 +5,11 @@ from products.models import Product
 # Create your views here.
 def homepage_view(request, *args, **kwargs):
 	featured_items = Product.objects.filter(featured=True)
+	length = len(featured_items)
 	count = 1
-	context = {'featured_items': featured_items}
+	context = {
+		'length': length,
+		'featured_items': featured_items
+		}
 
 	return render(request, "index.html", context)
