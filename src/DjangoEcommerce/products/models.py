@@ -9,5 +9,5 @@ class Product(models.Model):
 	cost 		= models.DecimalField(max_digits=10000,decimal_places=2)
 	category 	= models.CharField(max_length=50,default='Uncategorized')
 	featured 	= models.BooleanField(default=False)
-	image 		= models.ImageField(null=True, blank=True, upload_to="products/images/")
+	image 		= models.ImageField(null=True, blank=True, upload_to="static/images/")
 	
