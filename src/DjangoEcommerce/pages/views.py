@@ -12,3 +12,9 @@ def homepage_view(request, *args, **kwargs):
 		}
 
 	return render(request, "index.html", context)
+
+def about_view(request, *args, **kwargs):
+	return render(request, "about.html", {})
+
+def signup_view(request, *args, **kwargs):
+	return render(request, 'signup.html', {})
