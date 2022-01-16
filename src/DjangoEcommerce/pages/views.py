@@ -5,13 +5,13 @@ from products.models import Product, Category, Capacity
 # Create your views here.
 def homepage_view(request, *args, **kwargs):
 	featured_items = Product.objects.filter(featured=True)
-	#categories = Category.objects.all()
+	categories = Category.objects.all()
 	#capacities = Capacity.objects.all()
 	length = len(featured_items)
 	context = {
 		'length': length,
 		'featured_items': featured_items,
-		#'categories': categories,
+		'categories': categories,
 		#'capacities': capacities
 		}
 
