@@ -41,67 +41,14 @@
 		<section class="ftco-section ftco-no-pb">
 			<div class="container">
 				<div class="row">
+					{% for category in categories %}
 					<div class="col-lg-2 col-md-4 ">
 						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-1.jpg' %});"></div>
-							<h3>Bourbon</h3>
+							<div class="img" style="background-image: url({{ category.image }});"></div>
+							<h3>{{ category.name }}</h3>
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-1.jpg' %});"></div>
-							<h3>Brandy</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-2.jpg' %});"></div>
-							<h3>Gin</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-1.jpg' %});"></div>
-							<h3>Irish</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-1.jpg' %});"></div>
-							<h3>Liqeurs</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-3.jpg' %});"></div>
-							<h3>Rum</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-1.jpg' %});"></div>
-							<h3>Scotch</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-4.jpg' %});"></div>
-							<h3>Tequila</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-5.jpg' %});"></div>
-							<h3>Vodka</h3>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-4 ">
-						<div class="sort w-100 text-center ftco-animate">
-							<div class="img" style="background-image: url({% static 'pages/images/kind-6.jpg' %});"></div>
-							<h3>Whiskey</h3>
-						</div>
-					</div>
-
+					{% endfor %}
 				</div>
 			</div>
 		</section>
@@ -129,7 +76,7 @@
 							</div>
 							<div class="text text-center">
 								<span class="sale">Sale</span>
-								<span class="category">{{ item.category }}</span>
+								<span class="category"> {{ item.Category.name }} </span>
 								<h2>{{ item.name }} {{ item.capacity }}mL</h2>
 								<p class="mb-0"><span class="price price-sale">${{ item.price }}</span> <span class="price">${{ item.price }}</span></p>
 							</div>

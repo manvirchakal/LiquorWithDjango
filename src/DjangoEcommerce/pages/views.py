@@ -1,14 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from products.models import Product
+from products.models import Product, Category
 
 # Create your views here.
 def homepage_view(request, *args, **kwargs):
 	featured_items = Product.objects.filter(featured=True)
+	categories = Category.objects.all()
 	length = len(featured_items)
 	context = {
 		'length': length,
-		'featured_items': featured_items
+		'featured_items': featured_items,
+		'categories': categories
 		}
 
 	return render(request, "index.html", context)

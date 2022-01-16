@@ -82,16 +82,9 @@
 	          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a class="dropdown-item" href="checkout.html">Bourbon</a>
-              	<a class="dropdown-item" href="product.html">Brandy</a>
-                <a class="dropdown-item" href="product-single.html">Gin</a>
-                <a class="dropdown-item" href="checkout.html">Irish</a>
-                <a class="dropdown-item" href="checkout.html">Liqeurs and Cordials</a>
-                <a class="dropdown-item" href="cart.html">Rum</a>
-                <a class="dropdown-item" href="checkout.html">Scotch</a>
-                <a class="dropdown-item" href="checkout.html">Tequila</a>
-                <a class="dropdown-item" href="checkout.html">Vodka</a>
-                <a class="dropdown-item" href="checkout.html">Whiskey</a>
+              	{% for category in categories %}
+              	<a class="dropdown-item" href="{{ category.name }}">{{ category.name }}</a>
+                {% endfor %}
               </div>
             </li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
