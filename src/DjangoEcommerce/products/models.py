@@ -8,13 +8,18 @@ class Category(models.Model):
 	def __str__(self):
 		return self.name
 
+class Capacity(models.Model):
+	size 		= models.CharField(max_length=10)
+
+	def __str__(self):
+		return self.size
 
 
 class Product(models.Model):
 	name 		= models.CharField(max_length=200)
-	capacity 	= models.IntegerField()
+	capacity 	= models.ForeignKey(Capacity, blank=True, null=True, on_delete=models.CASCADE)
 	price 		= models.DecimalField(max_digits=10000,decimal_places=2)
-	description = models.TextField(null=True)
+	description = models.TextField(null=True, blank=True)
 	amount 		= models.IntegerField()
 	cost 		= models.DecimalField(max_digits=10000,decimal_places=2)
 	category 	= models.ForeignKey(Category, blank=True, null=True, on_delete=models.CASCADE)
