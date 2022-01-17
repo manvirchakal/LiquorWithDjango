@@ -27,9 +27,5 @@ class Product(models.Model):
 	image 		= models.ImageField(null=True, blank=True, upload_to="static/images/")
 
 	def __str__(self):
-		return self.name
+		return self.name +" "+ self.capacity.size
 
-	
-
-'''class OrderItem(models.Model):
-	user 	= models.For'''
