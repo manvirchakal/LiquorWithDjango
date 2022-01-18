@@ -33,3 +33,22 @@ def about_view(request, *args, **kwargs):
 
 def signup_view(request, *args, **kwargs):
 	return render(request, 'signup.html', {})
+
+def cart_view(request, *args, **kwargs):
+	order_check = Order.objects.filter(user=request.user,ordered=False)
+	no_order = ""
+
+	if order_check.exists():
+		order = order_check
+		order_items = order_check[0].products.all()
+
+	else:
+		no_order = "no items to display"
+
+	context = {
+		'no_order': no_order,
+		'order': order,
+		'order_items': order_items,
+	}
+
+	return render(request, 'cart.html', context)
