@@ -31,21 +31,13 @@ def add_to_cart(request, my_id):
 
 def remove_from_cart(request, my_id):
 	product = get_object_or_404(Product, id=my_id)
+	print(product)
 	order_check = Order.objects.filter(user=request.user,ordered=False)
 
-	if order_check.exists():
-		order = order_check[0]
+	order = order_check[0]
+	print(OrderProduct.objects.filter(item=product,user=request.user,ordered=False))
 
-		if order.products.filter(item=product).exists():
-			order_product = OrderProduct.objects.filter(item=product,user=request.user,ordered=False)[0]
-			order_product.delete()
-			print("Item has been removed from your cart")
-			return redirect("http://127.0.0.1:8000/")
-
-		else:
-			print("This item is not in your cart")
-			return redirect("http://127.0.0.1:8000/")
-
-	else:
-		print("You do not have an order")
-		return redirect("http://127.0.0.1:8000/")
+	order_product = OrderProduct.objects.get(item=product,user=request.user,ordered=False)
+	order_product.delete()
+	print("Item has been removed from your cart")
+	return redirect("http://127.0.0.1:8000/cart/")

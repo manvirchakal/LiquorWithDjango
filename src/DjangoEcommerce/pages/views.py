@@ -45,9 +45,6 @@ def cart_view(request, *args, **kwargs):
 	else:
 		no_order = "no items to display"
 
-
-	print(type(order_items[0]))
-
 	context = {
 		'no_order': no_order,
 		'order': order,

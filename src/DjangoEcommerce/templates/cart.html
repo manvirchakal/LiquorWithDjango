@@ -31,6 +31,7 @@
 						  </thead>
 						  <tbody>
 						  	{% for item in order_items %}
+						  	{{ item.id }}
 						    <tr class="alert" role="alert">
 						    	<td>
 						    		<label class="checkbox-wrap checkbox-primary">
@@ -55,7 +56,7 @@
 				          </td>
 				          <td>$89.98</td>
 						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="location.href = 'products/remove-from-cart/{{ item.id }}/'">
+						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="location.href = 'products/remove-from-cart/{{ item.item.id }}/'">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
 				          	</button>
 				        	</td>
