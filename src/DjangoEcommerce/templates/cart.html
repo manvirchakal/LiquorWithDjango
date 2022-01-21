@@ -20,12 +20,10 @@
 						<table class="table">
 						  <thead class="thead-primary">
 						    <tr>
-						    	<th>&nbsp;</th>
-						    	<th>&nbsp;</th>
 						    	<th>Product</th>
+						    	<th>&nbsp;</th>
 						      <th>Price</th>
 						      <th>Quantity</th>
-						      <th>total</th>
 						      <th>&nbsp;</th>
 						    </tr>
 						  </thead>
@@ -33,18 +31,12 @@
 						  	{% for item in order_items %}
 						    <tr class="alert" role="alert">
 						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
 						    		<div class="img" style="background-image: url({{ item.item.image }});"></div>
 						    	</td>
 						      <td>
 						      	<div class="email">
 						      		<span>{{ item.item.name }} {{ item.item.capacity.size }}</span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
+						      		<span></span>
 						      	</div>
 						      </td>
 						      <td>${{ item.item.price }}</td>
@@ -53,7 +45,6 @@
 				             	<input type="text" name="quantity" class="quantity form-control input-number" value="{{ item.quantity }}" min="1" max="100">
 				          	</div>
 				          </td>
-				          <td>$89.98</td>
 						      <td>
 						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="location.href = 'products/remove-from-cart/{{ item.item.id }}/'">
 				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
@@ -71,20 +62,20 @@
     					<h3>Cart Totals</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
-    						<span>$20.60</span>
+    						<span>${{ order_total }}</span>
     					</p>
     					<p class="d-flex">
-    						<span>Delivery</span>
-    						<span>$0.00</span>
+    						<span>Tax</span>
+    						<span>${{ order_tax }}</span>
     					</p>
     					<p class="d-flex">
     						<span>Discount</span>
-    						<span>$3.00</span>
+    						<span>$0.00</span>
     					</p>
     					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>$17.60</span>
+    						<span>{{ order_total_tax }}</span>
     					</p>
     				</div>
     				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>

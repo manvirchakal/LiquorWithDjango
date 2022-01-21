@@ -37,6 +37,16 @@ def signup_view(request, *args, **kwargs):
 def cart_view(request, *args, **kwargs):
 	order_check = Order.objects.filter(user=request.user,ordered=False)
 	no_order = ""
+	order_items = order_check[0].products.all()
+	order_total = 0
+	for item in order_items:
+		order_total += item.item.price*item.quantity
+
+	order_tax = float(order_total)*0.0825
+	order_tax = '%.2f'%order_tax
+
+	order_total_tax = float(order_total) + float(order_tax)
+	order_total_tax = '%.2f'%order_total_tax
 
 	if order_check.exists():
 		order = order_check
@@ -46,6 +56,9 @@ def cart_view(request, *args, **kwargs):
 		no_order = "no items to display"
 
 	context = {
+		'order_total': order_total,
+		'order_tax': order_tax,
+		'order_total_tax': order_total_tax,
 		'no_order': no_order,
 		'order': order,
 		'order_items': order_items,
