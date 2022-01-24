@@ -1,6 +1,8 @@
 from django.contrib import admin
-
+from django.contrib.auth import get_user_model
 # Register your models here.
-from .models import RegisteredUser
 
-admin.site.register(RegisteredUser)
+User = get_user_model()
+
+admin.site.register(User)
+

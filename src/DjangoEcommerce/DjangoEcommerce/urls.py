@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import homepage_view, about_view, signup_view, cart_view
+from pages.views import homepage_view, about_view, signup_view, cart_view, login_view
 from products.views import dynamic_lookup_view
 from cart.views import add_to_cart, remove_from_cart
 
@@ -24,6 +24,7 @@ urlpatterns = [
     path('', homepage_view, name='home'),
     path('about/', about_view, name='about'),
     path('signup/', signup_view, name='signup'),
+    path('login/', login_view, name='login'),
     path('products/<int:my_id>/', dynamic_lookup_view, name='product'),
     path('products/add-to-cart/<int:my_id>/', add_to_cart, name='add_to_cart'),
     path('cart/', cart_view, name='cart'),

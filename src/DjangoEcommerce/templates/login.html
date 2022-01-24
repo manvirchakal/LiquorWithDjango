@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="hero-wrap" style="background-image: url({% static 'pages/images/flatwhite.png' %});" data-stellar-background-ratio="0.5">
+	<section class="ftco-section ftco-no-pb">
+			<h3>Log In</h3>
+		</section>
+    {% if messages %}
+    <div class="alert alert-danger" role="alert">
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+        <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password">
+      </div>
+        <input type="submit" value="Submit" class="btn btn-secondary">
+    </form>
+
+<br/><br/>
+{% endblock %}

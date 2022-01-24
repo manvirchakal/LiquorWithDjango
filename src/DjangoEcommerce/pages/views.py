@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from products.models import Product, Category, Capacity
 from cart.models import OrderProduct, Order
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 # Create your views here.
 def homepage_view(request, *args, **kwargs):
@@ -46,6 +48,23 @@ def about_view(request, *args, **kwargs):
 
 def signup_view(request, *args, **kwargs):
 	return render(request, 'signup.html', {})
+
+def login_view(request, *args, **kwargs):
+	if request.method == "POST":
+		email = request.POST['email']
+		password = request.POST['password']
+		user = authenticate(request, email=email, password=password)
+		if user is not None:
+			login(request, user)
+			return redirect('home')
+
+		else:
+			messages.success(request, "There was an error logging in...")
+			return redirect('login')
+
+	context = {}
+
+	return render(request, 'login.html', context)
 
 def cart_view(request, *args, **kwargs):
 	if request.user.is_authenticated:
