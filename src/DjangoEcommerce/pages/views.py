@@ -11,7 +11,10 @@ def homepage_view(request, *args, **kwargs):
 	if request.user.is_authenticated:
 		order = Order.objects.filter(user=request.user, ordered=False)
 		#print(cart[0].products)
-		order_items = order[0].products.all()
+		if order:
+			order_items = order[0].products.all()
+		else:
+			order_items = []
 		#print(type(order_items[0]))
 		'''print(order_items)
 					items = order_items[0].item
@@ -50,7 +53,9 @@ def cart_view(request, *args, **kwargs):
 	if request.user.is_authenticated:
 		order_check = Order.objects.filter(user=request.user,ordered=False)
 		no_order = ""
-		order_items = order_check[0].products.all()
+		print(order_check)
+		if order_check:
+			order_items = order_check[0].products.all()
 		order_total = 0
 		for item in order_items:
 			order_total += item.item.price*item.quantity
@@ -63,7 +68,8 @@ def cart_view(request, *args, **kwargs):
 
 		if order_check.exists():
 			order = order_check
-			order_items = order_check[0].products.all()
+			if order.exists():
+				order_items = order_check[0].products.all()
 
 		else:
 			no_order = "no items to display"
