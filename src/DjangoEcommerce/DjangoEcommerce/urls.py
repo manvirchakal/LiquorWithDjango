@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import homepage_view, about_view, signup_view, cart_view, login_view
+from pages.views import homepage_view, about_view, cart_view
 from products.views import dynamic_lookup_view
 from cart.views import add_to_cart, remove_from_cart
+from users.views import login_view, logout_view, signup_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,5 @@ urlpatterns = [
     path('products/add-to-cart/<int:my_id>/', add_to_cart, name='add_to_cart'),
     path('cart/', cart_view, name='cart'),
     path('cart/products/remove-from-cart/<int:my_id>/', remove_from_cart, name='remove_from_cart'),
+    path('logout/', logout_view, name='logout'),
 ]

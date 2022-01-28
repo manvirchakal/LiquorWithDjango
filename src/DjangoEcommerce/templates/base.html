@@ -40,7 +40,11 @@
 			    		</p>
 		        </div>
 		        <div class="reg">
-		        	<p class="mb-0"><a href="/signup/" class="mr-2">Sign Up</a> <a href="/login/">Log In</a></p>
+		        	{% if request.user.is_authenticated  %}
+		        	<p class="mb-0"><a href="/profile/" class="mr-2">Profile</a> <a href="/logout/">Log Out</a></p>
+		  				{% else %}
+		  				<p class="mb-0"><a href="/signup/" class="mr-2">Sign Up</a> <a href="/login/">Log In</a></p>
+		  				{% endif %}
 		        </div>
 					</div>
 				</div>

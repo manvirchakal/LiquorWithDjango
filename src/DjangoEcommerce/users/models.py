@@ -12,9 +12,9 @@ class UserManager(BaseUserManager):
 			email = self.normalize_email(email)
 		)
 		user_obj.set_password(password)
-		user_obj.staff = is_staff
-		user_obj.admin = is_admin
-		user_obj.active = is_active
+		user_obj.staff 			= is_staff
+		user_obj.admin 			= is_admin
+		user_obj.active 		= is_active
 		user_obj.save(using=self._db)
 		return user_obj
 
@@ -34,7 +34,6 @@ class UserManager(BaseUserManager):
 				is_admin=True
 		)
 		return user
-
 
 
 class User(AbstractBaseUser):
