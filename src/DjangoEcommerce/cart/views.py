@@ -17,8 +17,9 @@ def add_to_cart(request, my_id):
 			order = order_check[0]
 
 			if order.products.filter(item=product).exists():
-				order_product.quantity += 1
-				order_product.save()
+				print(type(order_product[0].quantity))
+				order_product[0].quantity += 1
+				order_product[0].save()
 				print("Added quantity")
 				return redirect(request.META.get('HTTP_REFERER')) 
 
